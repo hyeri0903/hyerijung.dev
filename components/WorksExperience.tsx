@@ -6,7 +6,7 @@ const experienceData = [
   {
     role: 'Software Engineer, Backend Developer',
     company: 'NAVER Cloud',
-    period: 'Jun 2023 - Present',
+    period: 'June 2023 - Present',
     location: 'Gyeonggi-do, South Korea',
     description: (
       <ul className="mt-2 list-disc list-inside space-y-1">
@@ -25,20 +25,20 @@ const experienceData = [
   },
   {
     role: 'Software Engineer, Backend Developer',
-    company: 'NAVER Cloud (formerly WorksMobile)',
-    period: 'Sep 2021 - Jun 2023',
+    company: 'WorksMobile',
+    period: 'Sep 2021 - May 2023',
     location: 'Gyeonggi-do, South Korea',
     description: (
       <ul className="mt-2 list-disc list-inside space-y-1">
-        <li>Contributed to develop of the services’s centralised logging system for better observability.</li>
+        <li>Contributed to develop of the service’s centralised logging system for better observability.</li>
         <li>Led migration of the legacy Multilingual Management System from Python based architecture to Java and React based stack.</li>
       </ul>
     )
   },
   {
     role: 'Software Engineer, Intern',
-    company: '',
-    period: 'Jul 2021 - Aug 2021',
+    company: 'WorksMobile',
+    period: 'July 2021 - Aug 2021',
     location: 'Gyeonggi-do, South Korea',
     description: (
       <ul className="mt-2 list-disc list-inside space-y-1">
@@ -52,8 +52,8 @@ const experienceData = [
   },
   {
     role: 'Software Engineer',
-    company: 'Shinsegae I&C',
-    period: 'Jan 2020 - Mar 2020',
+    company: 'SHINSEGAE I&C',
+    period: 'Jan 2020 - June 2021',
     location: 'Seoul, South Korea',
     description: (
       <ul className="mt-2 list-disc list-inside space-y-1">
