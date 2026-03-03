@@ -1,4 +1,4 @@
-export default function Mobileinvitations() {
+export default function MobilePartyCard() {
   return (
     <div>
       <div className="flex flex-col md:flex-row items-center rounded-lg overflow-hidden">
@@ -8,7 +8,7 @@ export default function Mobileinvitations() {
               className="text-3xl font-bold text-black dark:text-white mb-4"
               style={{ textTransform: 'uppercase' }}
             >
-                Mobile Party Invitation
+                Party Card
             </h3>
             <p className="text-gray-800 dark:text-gray-200 mb-6">
               This application is mobile invitation for special occasions such as party.
@@ -41,7 +41,7 @@ export default function Mobileinvitations() {
               <img
                 src="/pink.jpg" // public 폴더에 이미지 넣고 경로 지정
                 alt="project screenshot"
-                className="w-[450px] h-[350px] object-cover mx-auto transition-transform duration-1000 ease-out hover:scale-110"
+                className="w-[450px] h-[300px] object-cover mx-auto transition-transform duration-1000 ease-out hover:scale-110"
               />
               </a>
           </div>
