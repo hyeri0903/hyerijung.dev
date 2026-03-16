@@ -18,10 +18,11 @@ export default function Projects() {
           <h3 className="font-bold text-primary inline relative after:content-[''] after:block after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1.5 after:bg-blue-300 after:z-0 z-10">Personal Side Projects</h3>
         </div>
         <div className="flex flex-col gap-y-4 md:gap-y-4">
+          <div {...aosProps}><BloomDiary /></div>
           <div {...aosProps}><MobileWeddingInvitations /></div>
           <div {...aosProps}><MobilePartyCard /></div>
           {/* <div {...aosProps}><Mbti2trip /></div> */}
-          <div {...aosProps}><BloomDiary /></div>
+         
         </div>
         
       </div>
