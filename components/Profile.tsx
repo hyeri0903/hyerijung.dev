@@ -13,7 +13,7 @@ export default function Profile() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col md:flex-row bg-[#ece7e1] dark:bg-black transition-colors">
+    <section className="min-h-screen flex flex-col md:flex-row bg-[#F0F0F0] dark:bg-black transition-colors">
       <div className="w-full md:w-[50%] md:ml-[15%] flex-shrink-0 flex flex-col px-4 md:px-20 justify-center gap-5">
         <div>
           <h2 {...aosProps} className="mt-10 font-playfairsc text-6xl md:text-[7vw] font-light leading-[1em] text-gray-900 dark:text-white">
