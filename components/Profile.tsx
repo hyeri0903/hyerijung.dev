@@ -25,7 +25,7 @@ export default function Profile() {
         </div>
        
         <div className="font-montserrat mt-5 text-[16px] leading-relaxed text-gray-700 dark:text-gray-300 font-normal">
-          Backend developer with 4+ years of experience building and scaling web server using Java and Kotlin. 
+          Backend developer with 5+ years of experience building and scaling web server using Java and Kotlin. 
           Skilled in B2B services, distributed systems, and building maintainable architectures. 
           Strong communicator who bridges the gap between technical and non-technical stakeholders.
         </div>
@@ -39,7 +39,7 @@ export default function Profile() {
               { label: 'Language',   skills: ['Java', 'Kotlin', 'JavaScript'] },
               { label: 'Framework',  skills: ['Spring Boot', 'React', 'Kafka'] },
               { label: 'Database',   skills: ['MySQL', 'MongoDB'] },
-              { label: 'Tools',      skills: ['Git', 'Swagger', 'REST API', 'TDD', 'n8n'] },
+              { label: 'Tools',      skills: ['Git', 'Swagger', 'REST API', 'TDD', 'n8n', 'Grafana'] },
             ].map(({ label, skills }) => (
               <div key={label} className="flex items-start gap-6">
                 <span className="font-montserrat text-[12px] text-gray-800 dark:text-gray-500 uppercase tracking-widest w-20 shrink-0 pt-1">

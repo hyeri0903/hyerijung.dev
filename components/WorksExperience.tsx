@@ -1,73 +1,87 @@
 'use client';
-import { Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { log } from 'console';
 
 const experienceData = [
   {
-    role: 'Software Engineer, Backend Developer',
+    logo: '/navercloud.jpeg',
+    role: 'Backend Developer, Full-time',
     company: 'NAVER Cloud',
-    period: 'June 2023 - Present',
+    period: 'Jun 2023 - Present',
     location: 'Gyeonggi-do, South Korea',
     description: (
       <ul className="mt-2 list-disc list-inside space-y-1">
         <li>
-          Designed and developed the OpenAPI for NaverWorks Task service, enabling third-party developer integrations.
-        </li>
-        <li>Led the development of a Kafka-based notification system, improving the reliability of the NaverWorks Task service.
-        </li>
-        <li>Enhanced system resilience by implementing Circuit Breaker for fault-tolerant service behaviour.
+          Developed OpenAPI for external developers, enabling scalable integration and extending platform functionality
         </li>
         <li>
-        Developed email and message notification using Spring Boot and Java for the Multilingual Management System.
+          Migrated a legacy notification system to a Kafka-based asynchronous pipeline, improving system reliability
+        </li>
+        <li>
+          Implemented a batch-based deletion pipeline for cloud storage, replacing synchronous API calls
+        </li>
+        <li>
+        Automated the code review workflow using Github Actions, n8n and on-premise LLM models, reducing
+        average review time by 50% and boosting review productivity
         </li>
       </ul>
     ),
   },
   {
-    role: 'Software Engineer, Backend Developer',
+    logo: '/naverworks.png',
+    role: 'Backend Developer, Full-time',
     company: 'WorksMobile',
     period: 'Sep 2021 - May 2023',
     location: 'Gyeonggi-do, South Korea',
     description: (
       <ul className="mt-2 list-disc list-inside space-y-1">
-        <li>Contributed to develop of the service’s centralised logging system for better observability.</li>
-        <li>Led migration of the legacy Multilingual Management System from Python based architecture to Java and React based stack.</li>
-      </ul>
-    )
-  },
-  {
-    role: 'Software Engineer, Intern',
-    company: 'WorksMobile',
-    period: 'July 2021 - Aug 2021',
-    location: 'Gyeonggi-do, South Korea',
-    description: (
-      <ul className="mt-2 list-disc list-inside space-y-1">
-         <li>Built a full-stack web application using Java, Spring Boot, MySQL and Vue.js.</li>
-        <li>Achieved 94% unit test coverage using Unit to ensure high code quality.</li>
         <li>
-          Designed and documented RESTful APIs using Swagger.
+          Automated the end-to-end translation management workflow by integrating an internal multilingual system with
+          external translation services, reducing the overall processing time by over 70%
+        </li>
+        <li>
+          Built a Kafka-based admin audit logging pipeline to ensure reliable logging and scalable analytics
+        </li>
+        <li>
+        Led a 6-member team to migrate an internal multilingual management system from Python-based architecture to
+        Java and React-based stack, reducing project lead time by 80% and eliminating communication overhead
         </li>
       </ul>
     )
   },
   {
-    role: 'Software Engineer',
+    logo: '/naverworks.png',
+    role: 'Full-stack developer, Intern',
+    company: 'WorksMobile',
+    period: 'July 2021 - Aug 2021',
+    location: 'Gyeonggi-do, South Korea',
+    description: (
+      <ul className="mt-2 list-disc list-inside space-y-1">
+         <li> Developed a full-stack project management web service using Java, Spring Boot, MySQL, and Vue.js</li>
+        <li>Achieved 94% test code coverage and integrated SonarQube to enforce clean code standards</li>
+        <li>
+        Designed RESTful APIs for the service and standardised API documentation using Swagger
+        </li>
+      </ul>
+    )
+  },
+  {
+    logo: '/shinsegae.png',
+    role: 'Software Engineer, Full-time',
     company: 'SHINSEGAE I&C',
-    period: 'Jan 2020 - June 2021',
+    period: 'Jan 2020 - Jun 2021',
     location: 'Seoul, South Korea',
     description: (
       <ul className="mt-2 list-disc list-inside space-y-1">
-         <li>
+          <li>
+          Automated the product data validation using Python, reducing processing time by 50% across 100K+ SKUs
+          </li>
+          <li>
+          Built MySQL-based sales data workflows and BI dashboards to support faster, data-driven business decisions
+          </li>
+          <li>
             Maintained and managed the E-mart Information Analysis System, handling large-scale product and sales data.
-          </li>
-          <li>
-            Created and optimised SQL queries based on business requirements.
-          </li>
-          <li>
-            Automated data validation process using Python, improving operational efficiency.
-          </li>
-          <li>
-            Developed and executed complex data processing logic using MySQL and MyBatis.
           </li>
       </ul>
     )
@@ -112,10 +126,15 @@ export default function WorkExperience() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {experienceData.map((exp, index) => (
-            <motion.div key={index} className="relative mb-12 pl-10 md:pl-12" variants={itemVariants}>
-              <div className="absolute left-[-9px] top-1 h-4 w-4 bg-primary rounded-full ring-8 ring-background" />
-              <div className="absolute left-[-19px] top-[-3px] bg-secondary p-2 rounded-full">
-                <Briefcase className="h-5 w-5 text-primary" />
+            <motion.div key={index} className="relative mb-12 pl-14" variants={itemVariants}>
+              <div className="absolute left-[-20px] top-0 w-10 h-10 rounded-full overflow-hidden border border-gray-200 dark:border-zinc-700 shadow-sm">
+                <Image
+                  src={exp.logo}
+                  alt={exp.company}
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="flex justify-between items-baseline mb-1">
                 <h3 className="text-xl font-bold text-primary">{exp.company}</h3>
