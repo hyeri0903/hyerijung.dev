@@ -15,10 +15,19 @@ export default function Contact() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">Contact</h2>
-        <p className="text-muted-foreground mt-2 mb-8 max-w-2xl mx-auto">
-          <span className="text-2xl">Let's work together! </span><br />
-          I'm always open to new opportunities and collaborations.
+    
+        {/* <h2 className="text-3xl md:text-4xl font-bold">Contact</h2> */}
+        <p className="text-xs font-bold tracking-[0.2em] text-[#3a6b4a] uppercase mb-5">
+            Contact
+        </p>
+        <p className="text-xl text-muted-foreground mt-2 mb-8 max-w-2xl mx-auto">
+          <span className="text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-10">
+            Let's work <span className="text-[#3a6b4a]">together!</span>
+          </span> <br />
+          <span className="block mt-6">
+            I'm always open to new opportunities and collaborations.
+          </span>
+          
         </p>
         <button
           rel="noopener noreferrer"

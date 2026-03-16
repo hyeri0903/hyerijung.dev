@@ -13,15 +13,18 @@ export default function Profile() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col md:flex-row bg-[#F0F0F0] dark:bg-black transition-colors">
+    <section className="min-h-screen py-20 flex flex-col md:flex-row bg-[#ffffff] dark:bg-black transition-colors">
       <div className="w-full md:w-[50%] md:ml-[15%] flex-shrink-0 flex flex-col px-4 md:px-20 justify-center gap-5">
         <div>
-          <h2 {...aosProps} className="mt-10 font-playfairsc text-6xl md:text-[7vw] font-light leading-[1em] text-gray-900 dark:text-white">
+          {/* <h2 {...aosProps} className="mt-10 font-playfairsc text-6xl md:text-[7vw] font-light leading-[1em] text-gray-900 dark:text-white">
             Hyeri
+          </h2> */}
+            <h2 className="text-5xl lg:text-6xl font-black text-gray-900 dark:text-white">
+            Profile
           </h2>
         </div>
         <div className="font-dmserif mt-5 text-2xl md:text-[2vw] font-light leading-[1em] text-gray-900 dark:text-white">
-          I'm Hyeri-Jung. A software engineer, web developer and problem solver.
+          I'm Hyeri-Jung. <br /> A software engineer, web developer and problem solver.
         </div>
        
         <div className="font-montserrat mt-5 text-[16px] leading-relaxed text-gray-700 dark:text-gray-300 font-normal">
@@ -61,13 +64,13 @@ export default function Profile() {
         </div>
 
         <div>
-          <div className="font-dmserif mt-5 text-2xl font-light leading-[1em] text-gray-900 dark:text-white">
+          {/* <div className="font-dmserif mt-5 text-2xl font-light leading-[1em] text-gray-900 dark:text-white">
             Education
           </div>
           <div className="font-montserrat mt-3 text-[16px] leading-relaxed text-gray-700 dark:text-gray-300 font-normal">
             B.S. in Computer Science, Kookmin University <br />
             Seoul, South Korea
-          </div>
+          </div> */}
         </div>
         <div className="mt-5 mb-10 md:mb-20">
           <button

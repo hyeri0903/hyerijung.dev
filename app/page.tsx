@@ -8,7 +8,7 @@ import Contact from "components/Contact";
 
 export default function Page() {
   return (
-    <div className="flex-col min-h-screen bg-white dark:bg-black w-full">
+    <div className="flex-col min-h-screen bg-[#f0ede8] dark:bg-zinc-950 w-full">
       <Header />
       <main className="scroll-smooth mx-auto">
         <section>

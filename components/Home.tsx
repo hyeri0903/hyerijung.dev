@@ -1,46 +1,110 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { Github, Linkedin, Twitter, Send } from "lucide-react";
+import { SiTistory } from "react-icons/si";
 
 export default function Home() {
   return (
-    <section className="w-full min-h-screen flex justify-center items-center text-center mx-auto px-4 py-8 dark:bg-black transition-colors">
-      <div>
-        <h1 className="text-left text-6xl lg:text-8xl font-bold text-gray-900 dark:text-white w-full">
-          Hi, <br />
-          I'm{' '}
-          <motion.div
-            className="relative inline-block"
-            whileHover="hovered"
-            initial="initial"
-          >
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-extrabold hover:scale-110 hover:text-blue-400 cursor-pointer">
-              Hyeri Jung
-            </span>
-            <motion.span
-              variants={{
-                initial: { opacity: 0, scale: 0.5, rotate: 0 },
-                hovered: { opacity: 1, scale: 1.5, rotate: 15 }
-              }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="absolute -top-4 -right-3 text-red-500 text-2xl z-10 pointer-events-none"
+    <section className="w-full min-h-screen flex items-center bg-[#f0ede8] dark:bg-zinc-950 px-8 lg:px-20">
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-20">
+        {/* Left */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-xs font-bold tracking-[0.2em] text-[#3a6b4a] uppercase mb-5">
+            Backend Developer
+          </p>
+          <h1 className="text-7xl lg:text-8xl font-black leading-[1.05] mb-6 text-gray-900 dark:text-white">
+            Hyeri<br />
+            <span className="text-[#3a6b4a]">Jung.</span>
+          </h1>
+          <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-10 max-w-md">
+          Backend engineer with 5+ years of experience building scalable web services with Java/Kotlin and Spring Boot, based in Korea.
+       
+          </p>
+          <div className="flex gap-4 flex-wrap space-x-6 mt-12">
+            <a
+              href="https://github.com/hyeri0903"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="GitHub"
             >
-              ❤️
-            </motion.span>
-            .
-          </motion.div>
-          <br/>
-          Web Developer
-        </h1>
+              <Github size={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hyerijung/"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={28} />
+            </a>
+            <a
+              href="https://hyeri0903.tistory.com/"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Twitter"
+            >
+              <SiTistory size={28} />
+            </a>
+          </div>
+        </motion.div>
 
-        <p className="mt-5 text-left text-3xl lg:text-5xl leading-relaxed text-gray-600 dark:text-gray-300 font-normal">
-           Backend developer specializing in web services.
-        </p>
+        {/* Right — Circle profile */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative flex items-center justify-center"
+        >
+          {/* Large circle outline */}
+          <div className="relative w-[420px] h-[620px] rounded-full border-2  overflow-hidden">
+            <video
+              src="/hyeri-grok.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Small decorative filled circle */}
+          <div className="absolute bottom-4 right-4 w-24 h-24 rounded-full bg-[#3a6b4a]/30" />
+        </motion.div>
+        {/* <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-[#e5e0d9] dark:bg-zinc-900 rounded-2xl p-8 lg:p-10"
+        >
+          <div className="divide-y divide-gray-300 dark:divide-zinc-700">
+            <div className="flex items-center gap-8 pb-7">
+              <span className="text-6xl font-black text-gray-900 dark:text-white w-24 shrink-0">
+                5<sup className="text-2xl font-bold text-[#3a6b4a]">+</sup>
+              </span>
+              <p className="text-gray-500 dark:text-gray-400 leading-snug">
+                Years of backend development experience
+              </p>
+            </div>
+            <div className="flex items-center gap-8 py-7">
+              <span className="text-6xl font-black text-gray-900 dark:text-white w-24 shrink-0">
+                4
+              </span>
+              <p className="text-gray-500 dark:text-gray-400 leading-snug">
+                Companies — Naver Cloud, WorksMobile, Shinsegae...
+              </p>
+            </div>
+            <div className="flex items-center gap-8 pt-7">
+              <span className="text-6xl font-black text-gray-900 dark:text-white w-24 shrink-0">
+                3
+              </span>
+              <p className="text-gray-500 dark:text-gray-400 leading-snug">
+                Live side projects shipped & deployed
+              </p>
+            </div>
+          </div>
+        </motion.div> */}
       </div>
-      <a href="#profile" aria-label="Scroll to about section" className="absolute bottom-10 animate-bounce">
-        <ArrowDown className="w-6 h-6 text-primary" />
-      </a>
     </section>
   );
 }
