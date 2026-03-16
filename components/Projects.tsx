@@ -17,8 +17,8 @@ export default function Projects() {
       
         <div className="flex flex-col gap-y-4 md:gap-y-4">
           <div {...aosProps}><BloomDiary /></div>
-          <div {...aosProps}><MobileWeddingInvitations /></div>
           <div {...aosProps}><MobilePartyCard /></div>
+          <div {...aosProps}><MobileWeddingInvitations /></div>
           {/* <div {...aosProps}><Mbti2trip /></div> */}
          
         </div>

@@ -22,7 +22,7 @@ export default function BloomDiary() {
               </h3>
               <p className="text-gray-800 dark:text-gray-200 mb-6">
                 This project lets you write an English diary entry, select your CEFR level, and receive instant AI-powered feedback on grammar and vocabulary.
-                It is built with React.js and Tailwind CSS, using Claude Code.
+                It is built with React and Tailwind CSS, using Claude Code.
               </p>
   
               {/* 버튼 링크 */}
