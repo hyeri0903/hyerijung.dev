@@ -34,9 +34,29 @@ export default function Profile() {
           <div className="font-dmserif mt-5 text-2xl font-light leading-[1em] text-gray-900 dark:text-white">
             Skills
           </div>
-          <div className="font-montserrat mt-3 text-[16px] leading-relaxed text-gray-700 dark:text-gray-300 font-normal">
-            Java, Kotlin, React, Spring Boot, Kafka, Swagger <br />
-            MySQL, MongoDB, Git, TDD, REST API, Agile/Scrum
+          <div className="mt-3 flex flex-col gap-2">
+            {[
+              { label: 'Language',   skills: ['Java', 'Kotlin', 'JavaScript'] },
+              { label: 'Framework',  skills: ['Spring Boot', 'React', 'Kafka'] },
+              { label: 'Database',   skills: ['MySQL', 'MongoDB'] },
+              { label: 'Tools',      skills: ['Git', 'Swagger', 'REST API', 'TDD', 'n8n'] },
+            ].map(({ label, skills }) => (
+              <div key={label} className="flex items-start gap-6">
+                <span className="font-montserrat text-[12px] text-gray-800 dark:text-gray-500 uppercase tracking-widest w-20 shrink-0 pt-1">
+                  {label}
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="font-montserrat text-[13px] px-3 py-1 rounded-full border border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-200 cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
