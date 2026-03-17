@@ -50,28 +50,48 @@ export default function WorkExperience() {
           {experienceData.map((exp, index) => (
             <motion.div
               key={index}
-              className="grid grid-cols-[160px_32px_1fr] gap-x-6"
+              className="grid grid-cols-[1fr] sm:grid-cols-[160px_32px_1fr] gap-x-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              {/* Left: company + date */}
-              <div className="text-right pt-0.5 pb-12">
+              {/* Mobile: stacked layout / Desktop: hidden (replaced by left column) */}
+              <div className="sm:hidden flex items-start gap-4 pb-10">
+                {/* dot + line */}
+                <div className="flex flex-col items-center shrink-0 pt-1">
+                  <div className="w-3 h-3 rounded-full bg-[#3a6b4a] shrink-0 z-10" />
+                  {index < experienceData.length - 1 && (
+                    <div className="w-px flex-1 bg-gray-300 dark:bg-zinc-700 mt-1 min-h-[80px]" />
+                  )}
+                </div>
+                {/* content */}
+                <div className="flex-1">
+                  <p className="font-bold text-gray-900 dark:text-white text-base">{exp.company}</p>
+                  <h3 className="font-semibold text-gray-700 dark:text-gray-300 text-sm mt-0.5">{exp.role}</h3>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{exp.period}</p>
+                  <p className="mt-2 text-gray-500 dark:text-gray-400 leading-relaxed text-sm">
+                    {exp.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Desktop: Left column - company + date */}
+              <div className="hidden sm:block text-right pt-0.5 pb-12">
                 <p className="font-bold text-gray-900 dark:text-white text-base">{exp.company}</p>
                 <p className="text-sm text-gray-400 dark:text-gray-500 mt-1">{exp.period}</p>
               </div>
 
-              {/* Middle: dot + line */}
-              <div className="flex flex-col items-center">
+              {/* Desktop: Middle - dot + line */}
+              <div className="hidden sm:flex flex-col items-center">
                 <div className="w-3 h-3 rounded-full bg-[#3a6b4a] mt-1 shrink-0 z-10" />
                 {index < experienceData.length - 1 && (
                   <div className="w-px flex-1 bg-gray-300 dark:bg-zinc-700 mt-1" />
                 )}
               </div>
 
-              {/* Right: role + description */}
-              <div className="pb-12">
+              {/* Desktop: Right - role + description */}
+              <div className="hidden sm:block pb-12">
                 <h3 className="font-bold text-gray-900 dark:text-white text-lg">{exp.role}</h3>
                 <p className="mt-2 text-gray-500 dark:text-gray-400 leading-relaxed text-base">
                   {exp.description}
