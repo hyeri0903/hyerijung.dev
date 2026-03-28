@@ -5,6 +5,7 @@ import WorkExperience from "components/WorksExperience";
 import Footer from "components/Footer";
 import Projects from "components/Projects";
 import Contact from "components/Contact";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Page() {
   return (
@@ -31,6 +32,7 @@ export default function Page() {
         </section> */}
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
