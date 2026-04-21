@@ -4,20 +4,12 @@ import { motion } from 'framer-motion';
 
 const projectData = [
   {
-    thumbnail: '/bloomdiary.png',
-    title: 'Bloom English Diary',
+    thumbnail: '/langman-thumbnail.png',
+    title: 'Langman',
     description:
-      'AI-powered English diary with CEFR-level grammar & vocabulary feedback. Built with React, Tailwind, Claude API.',
-    demo: 'https://bloom-english-diary.vercel.app',
-    code: 'https://github.com/hyeri0903/bloom-diary',
-  },
-  {
-    thumbnail: '/pink.png',
-    title: 'Party Card',
-    description:
-      'Mobile invitation web app for special occasions. Built with Next.js and Tailwind CSS.',
-    demo: 'https://mobile-invitation-rouge.vercel.app/',
-    code: 'https://github.com/hyeri0903/mobile-invitation',
+      'A responsive web application introducing Langman, a Chinese-inspired dining bar located in South Korea. Built with Next.js, TypeScript, and Tailwind CSS, developed with the assistance of Claude Code, and deployed on Vercel.',
+    demo: 'https://langman-sejong-tau.vercel.app/',
+    code: 'https://github.com/hyeri0903/langman-sejong',
   },
   {
     thumbnail: '/mobile-wedding-thumbnail.png',
@@ -26,6 +18,23 @@ const projectData = [
       'Mobile wedding invitation app. Built with React, Tailwind CSS, and deployed on Cloudflare Workers.',
     demo: 'https://forever-love-invitation.hazystudio.workers.dev/',
     code: 'https://github.com/hyeri0903/forever-love-invitation',
+  },
+  {
+    thumbnail: '/bloomdiary.png',
+    title: 'Bloom English Diary',
+    description:
+      'AI-powered English diary with CEFR-level grammar & vocabulary feedback. Built with React, Tailwind, Claude API.',
+    demo: 'https://bloom-english-diary.vercel.app',
+    code: 'https://github.com/hyeri0903/bloom-diary',
+  },
+ 
+  {
+    thumbnail: '/pink.png',
+    title: 'Party Card',
+    description:
+      'Mobile invitation web app for special occasions. Built with Next.js and Tailwind CSS.',
+    demo: 'https://mobile-invitation-rouge.vercel.app/',
+    code: 'https://github.com/hyeri0903/mobile-invitation',
   },
 ];
 
@@ -46,7 +55,7 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projectData.map((project, index) => (
             <motion.div
               key={index}
@@ -57,7 +66,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {/* Thumbnail */}
-              <div className="rounded-xl h-44 overflow-hidden mb-6">
+              <div className="rounded-xl aspect-video overflow-hidden mb-6">
                 <img
                   src={project.thumbnail}
                   alt={`${project.title} thumbnail`}
