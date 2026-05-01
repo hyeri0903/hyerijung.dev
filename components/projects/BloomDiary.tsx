@@ -6,7 +6,7 @@ export default function BloomDiary() {
             <div className="md:w-1/2 w-full transition-transform duration-300 hover:cursor-pointer">
               <a href="https://bloom-english-diary.vercel.app/" target="_blank" rel="noopener noreferrer">
                 <img
-                  src="/bloomdiary.png" // public 폴더에 이미지 넣고 경로 지정
+                  src="/bloom-diary.png" // public 폴더에 이미지 넣고 경로 지정
                   alt="project screenshot"
                   className="w-[450px] h-[300px] object-cover mx-auto transition-transform duration-1000 ease-out hover:scale-110"
                 />

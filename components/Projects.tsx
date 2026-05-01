@@ -20,7 +20,7 @@ const projectData = [
     code: 'https://github.com/hyeri0903/forever-love-invitation',
   },
   {
-    thumbnail: '/bloomdiary.png',
+    thumbnail: '/bloom-diary.png',
     title: 'Bloom English Diary',
     description:
       'AI-powered English diary with CEFR-level grammar & vocabulary feedback. Built with React, Tailwind, Claude API.',
